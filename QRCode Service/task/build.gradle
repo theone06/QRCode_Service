@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$hs.spring.bootVersion"
         classpath "io.spring.gradle:dependency-management-plugin:$hs.spring.dependencyManagementVersion"
+
     }
 }
 
@@ -22,6 +23,8 @@ repositories {
 sourceSets.main.resources.srcDirs = ["src/resources"]
 
 dependencies {
+    implementation 'com.google.zxing:core:3.5.2'
+    implementation 'com.google.zxing:javase:3.5.2'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
